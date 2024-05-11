@@ -1,0 +1,16 @@
+body {
+    padding: 2% 2%;
+    background-color: cornflowerblue;
+}
+
+#testDiv {
+    background-color: blueviolet;
+    padding: 5%;
+    height: 60%;
+    width: 90%;
+}
+
+p {
+    color: black;
+    background-color: azure;
+}
