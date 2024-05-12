@@ -3,6 +3,11 @@ body {
     background-color: #ffa530;
 }
 
+header {
+    display: flex;
+    
+}
+
 #testDiv {
     background-color: whitesmoke;
     padding: 5%;
