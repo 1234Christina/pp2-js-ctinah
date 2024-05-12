@@ -6,8 +6,8 @@ body {
 #testDiv {
     background-color: whitesmoke;
     padding: 5%;
-    height: 60%;
-    width: 90%;
+    height: auto;
+    width: fit-content;
 }
 
 p {
