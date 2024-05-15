@@ -1,11 +1,26 @@
+
+/* Body styling */
+
 body {
     padding: 2% 2%;
     background-color: #ffa530;
 }
 
-header {
-    display: flex;
-    
+/* header {
+    width: fit-content;
+} */
+
+/*Styling for span within header*/
+header > span {
+    display: block;
+    background-color: white;
+    height: 25%;
+}
+
+/*Styling for h1 to override span styling*/
+h1 {
+    font-weight: 100;
+    margin: 0 3%;
 }
 
 #testDiv {
