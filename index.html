@@ -7,6 +7,7 @@
     <title>Loud House Quiz</title>
 </head>
 <body>
+    <!-- Header area to contain game logo and game title -->
     <header>
         <span>
             <img src="assets/images/loudhouselogo.png" alt="The Loud House Logo">
@@ -17,18 +18,27 @@
     <!-- <div id="testDiv" onmouseover="working()">
         <p>Play Game</p>
     </div> -->
+
+    <!-- Div to contain the main game space, this will hold the question and corresponding image,
+         as well as the True and False buttons for the user -->
     <div id="gameSpace">
-        <span>
+        <span id="currentQuestion">
             <h2>The Question goes here...????</h2>
         </span>
         <br>
-        <button>True</button>
-        <button>False</button>
+
+        <!--Image will go here-->
+        <!-- <img src="" alt=""> -->
+
+        <button class="true">True</button>
+        <button class="false">False</button>
     </div>
-    <div></div>
+    <br>
+    <button id="goToNextQuestion">next question</button>
     <div></div>
     <footer>
-        <p>Want to know more about The Loud House?
+        <!-- A link in the footer to take user to more information about The Loud House -->
+        <p>Want to know more about <em>The Loud House</em>?
             <a href="">Click here!</a>
         </p>
     </footer>
