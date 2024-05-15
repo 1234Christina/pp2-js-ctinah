@@ -23,6 +23,28 @@ h1 {
     margin: 0 3%;
 }
 
+/* Button styling for True and False buttons */
+.true {
+    background-color: red;
+    height: 40px;
+    width: 75px;
+}
+
+.false {
+    background-color: green;
+    height: 40px;
+    width: 75px;
+}
+
+
+/* Button styling for next question button */
+#goToNextQuestion {
+    background-color: orangered;
+    height: 40px;
+    width: 75px;
+}
+
+
 #testDiv {
     background-color: whitesmoke;
     padding: 5%;
