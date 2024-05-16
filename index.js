@@ -47,9 +47,13 @@ function nextQuestion() {
     let question = questionBank[randomIndex];
     return question;
 }
-// Random question chosen, now display it to the user
+// Random question generated, now display it to the user
 function displayQuestion() {
+    let userQuestion = nextQuestion();
     
+    let qDisplay = document.getElementById('currentQuestion');
+    qDisplay.innerHTML = userQuestion;
+    document.body.appendChild(qDisplay);
 }
 
 // trueIsRight() {
