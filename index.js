@@ -1,7 +1,16 @@
 // /** The initial game functions */
 
 // When page loads do this
-//
+document.addEventListener('DOMContentLoaded', function() {
+    let gameButtons = document.getElementsByTagName('button');
+
+    for (let buttons of gameButtons) {
+        buttons.addEventListener('click', function() {
+            alert("The page works!");
+        }) 
+        
+    }
+});
 
 // A question bank to store all the possible questions in the game
 
