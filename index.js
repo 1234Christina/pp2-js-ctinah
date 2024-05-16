@@ -39,6 +39,19 @@ const questionBank = [
     // Add as many as possible
 ]
 
+// Begin by getting a random question from the question bank
+function nextQuestion() {
+    // use math random to generate any question from bank
+    let randomIndex = Math.floor(Math.random() * questionBank.length);
+    // now from the random index get only the question property
+    let question = questionBank[randomIndex];
+    return question;
+}
+// Random question chosen, now display it to the user
+function displayQuestion() {
+    
+}
+
 // trueIsRight() {
 
 // };
