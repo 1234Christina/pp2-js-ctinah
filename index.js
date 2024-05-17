@@ -2,14 +2,26 @@
 
 /** When page loads add event listener for all buttons */
 document.addEventListener('DOMContentLoaded', function() {
-    let gameButtons = document.getElementsByTagName('button');
+    displayQuestion();
+    // let gameButtons = document.getElementsByTagName('button');
+    // A constant variable for each button
+    const nextQuestionButton = document.getElementById('goToNextQuestion');
+    const pickTrue = document.getElementsByClassName('true');
+    const pickFalse = document.getElementsByClassName('false');
 
-    for (let buttons of gameButtons) {
-        buttons.addEventListener('click', function() {
-            alert("The page works!");
-        }) 
+    // for (let buttons of gameButtons) {
+    //     buttons.addEventListener('click', function() {
+    //         alert("The page works!");
+    //     }) 
         
-    }
+    // }
+
+    /** When next question button is clicked, run the function to display a new question */
+    nextQuestionButton.addEventListener('click', function() {
+        displayQuestion();
+    })
+
+
 });
 
 /** A question bank to store all the possible questions in the game */
@@ -56,10 +68,9 @@ function displayQuestion() {
     //console.log('QUESTION: ', qDisplay)
     qDisplay.innerHTML = userQuestion.question;
 
-    document.body.appendChild(qDisplay);
+    //document.body.appendChild(qDisplay);
 }
 
-displayQuestion();
 
 // trueIsRight() {
 
