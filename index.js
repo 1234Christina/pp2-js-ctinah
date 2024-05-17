@@ -1,16 +1,8 @@
 // /** The initial game functions */
 
-/** When page loads add event listener to display first quiz question*/
+/** Event listener to display first quiz question when page loads*/
 document.addEventListener('DOMContentLoaded', function() {
     displayQuestion();
-    // let gameButtons = document.getElementsByTagName('button');
-    // for (let buttons of gameButtons) {
-    //     buttons.addEventListener('click', function() {
-    //         alert("The page works!");
-    //     }) 
-        
-    // }
-
 });
 
 // A constant variable for each button
@@ -24,7 +16,6 @@ const pickFalse = document.getElementById('false');
 })
 
 /** A question bank to store all the possible questions in the game */
-
 const questionBank = [
     {
         'question': 'The main character is called Lincoln Loud?',
@@ -50,15 +41,15 @@ const questionBank = [
     // Add as many as possible
 ]
 
-/** Begin by getting a random question from the question bank */
+/** Gets a random question from the question bank */
 function nextQuestion() {
-    // use math random to generate any question from bank
+    // uses math random to generate any question from question bank
     let randomIndex = Math.floor(Math.random() * questionBank.length);
     let question = questionBank[randomIndex];
     return question;
 }
 
-/** Random question generated, now display it to the user */
+/** Random question generated, Displays it to the user */
 function displayQuestion() {
     let userQuestion = nextQuestion();
     //console.log ('QUESTION OBJECT: ', userQuestion)
@@ -66,8 +57,6 @@ function displayQuestion() {
     let qDisplay = document.getElementById('currentQuestion');
     //console.log('QUESTION: ', qDisplay)
     qDisplay.innerHTML = userQuestion.question;
-
-    //document.body.appendChild(qDisplay);
 }
 
 function trueIsRight() {
@@ -79,7 +68,7 @@ function trueIsRight() {
 
 // };
 
-/** When True is clicked do this (this is the event listener for true button) */
+/** Event listener for true button */
 pickTrue.addEventListener('click', function() {
     // let answer = .answer; //improve this to grab answer object from displayed question
     // if (answer === true) {
@@ -101,7 +90,7 @@ pickTrue.addEventListener('click', function() {
 
 // };
 
-/** When False is clicked do this (this is the event listener for False button) */
+/** Event listener for False button) */
 pickFalse.addEventListener('click', function() {
     console.log("pickFalse function works")
 })
