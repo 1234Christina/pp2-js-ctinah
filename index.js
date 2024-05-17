@@ -1,6 +1,6 @@
 // /** The initial game functions */
 
-// When page loads add event listener for all buttons
+/** When page loads add event listener for all buttons */
 document.addEventListener('DOMContentLoaded', function() {
     let gameButtons = document.getElementsByTagName('button');
 
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// A question bank to store all the possible questions in the game
+/** A question bank to store all the possible questions in the game */
 
 const questionBank = [
     {
@@ -39,21 +39,21 @@ const questionBank = [
     // Add as many as possible
 ]
 
-// Begin by getting a random question from the question bank
+/** Begin by getting a random question from the question bank */
 function nextQuestion() {
     // use math random to generate any question from bank
     let randomIndex = Math.floor(Math.random() * questionBank.length);
-    // now from the random index get only the question property????
     let question = questionBank[randomIndex];
     return question;
 }
-// Random question generated, now display it to the user
+
+/** Random question generated, now display it to the user */
 function displayQuestion() {
     let userQuestion = nextQuestion();
-    console.log ('QUESTION OBJECT: ', userQuestion)
-    console.log ('USER QUESTION: ', userQuestion.question)
+    //console.log ('QUESTION OBJECT: ', userQuestion)
+    //console.log ('USER QUESTION: ', userQuestion.question)
     let qDisplay = document.getElementById('currentQuestion');
-    console.log('QUESTION: ', qDisplay)
+    //console.log('QUESTION: ', qDisplay)
     qDisplay.innerHTML = userQuestion.question;
 
     document.body.appendChild(qDisplay);
