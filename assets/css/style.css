@@ -24,7 +24,7 @@ h1 {
 }
 
 /* Button styling for True and False buttons */
-.true {
+#true {
     background-color: red;
     height: 40px;
     width: 75px;

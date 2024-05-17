@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // let gameButtons = document.getElementsByTagName('button');
     // A constant variable for each button
     const nextQuestionButton = document.getElementById('goToNextQuestion');
-    const pickTrue = document.getElementsByClassName('true');
+    const pickTrue = document.getElementById('true');
     const pickFalse = document.getElementsByClassName('false');
 
     // for (let buttons of gameButtons) {
@@ -21,7 +21,17 @@ document.addEventListener('DOMContentLoaded', function() {
         displayQuestion();
     })
 
-
+    pickTrue.addEventListener('click', function() {
+        let answer = userQuestion.answer; //improve this to grab answer object from displayed question
+        if (answer === true) {
+            trueIsRight();
+        // } else if (userQuestion.answer === false) {
+        //     // a function here to show what the correct answer was
+        } else {
+            alert('please choose true or false');
+            console.log('function running');
+        }
+    })
 });
 
 /** A question bank to store all the possible questions in the game */
@@ -72,15 +82,15 @@ function displayQuestion() {
 }
 
 
-// trueIsRight() {
-
-// };
+function trueIsRight() {
+    // console.log("Well done!" + " function works");
+};
 
 // trueIsWrong() {
 
 // };
 
-// When True is clicked do this
+// When True is clicked do this (this is th event listener for true button)
 //
 
 // falseIsRight() {
@@ -91,7 +101,7 @@ function displayQuestion() {
 
 // };
 
-// When False is clicked do this
+// When False is clicked do this (this is the event listener for false button)
 //
 
 
