@@ -1,6 +1,6 @@
 // /** The initial game functions */
 
-// When page loads do this
+// When page loads add event listener for all buttons
 document.addEventListener('DOMContentLoaded', function() {
     let gameButtons = document.getElementsByTagName('button');
 
@@ -43,18 +43,23 @@ const questionBank = [
 function nextQuestion() {
     // use math random to generate any question from bank
     let randomIndex = Math.floor(Math.random() * questionBank.length);
-    // now from the random index get only the question property
+    // now from the random index get only the question property????
     let question = questionBank[randomIndex];
     return question;
 }
 // Random question generated, now display it to the user
 function displayQuestion() {
     let userQuestion = nextQuestion();
-    
+    console.log ('QUESTION OBJECT: ', userQuestion)
+    console.log ('USER QUESTION: ', userQuestion.question)
     let qDisplay = document.getElementById('currentQuestion');
-    qDisplay.innerHTML = userQuestion;
+    console.log('QUESTION: ', qDisplay)
+    qDisplay.innerHTML = userQuestion.question;
+
     document.body.appendChild(qDisplay);
 }
+
+displayQuestion();
 
 // trueIsRight() {
 
