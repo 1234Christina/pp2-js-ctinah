@@ -1,14 +1,9 @@
 // /** The initial game functions */
 
-/** When page loads add event listener for all buttons */
+/** When page loads add event listener to display first quiz question*/
 document.addEventListener('DOMContentLoaded', function() {
     displayQuestion();
     // let gameButtons = document.getElementsByTagName('button');
-    // A constant variable for each button
-    const nextQuestionButton = document.getElementById('goToNextQuestion');
-    const pickTrue = document.getElementById('true');
-    const pickFalse = document.getElementsByClassName('false');
-
     // for (let buttons of gameButtons) {
     //     buttons.addEventListener('click', function() {
     //         alert("The page works!");
@@ -16,23 +11,17 @@ document.addEventListener('DOMContentLoaded', function() {
         
     // }
 
-    /** When next question button is clicked, run the function to display a new question */
-    nextQuestionButton.addEventListener('click', function() {
-        displayQuestion();
-    })
-
-    pickTrue.addEventListener('click', function() {
-        let answer = userQuestion.answer; //improve this to grab answer object from displayed question
-        if (answer === true) {
-            trueIsRight();
-        // } else if (userQuestion.answer === false) {
-        //     // a function here to show what the correct answer was
-        } else {
-            alert('please choose true or false');
-            console.log('function running');
-        }
-    })
 });
+
+// A constant variable for each button
+const nextQuestionButton = document.getElementById('goToNextQuestion');
+const pickTrue = document.getElementById('true');
+const pickFalse = document.getElementById('false');
+
+ /** When next question button is clicked, run the function to display a new question */
+ nextQuestionButton.addEventListener('click', function() {
+    displayQuestion();
+})
 
 /** A question bank to store all the possible questions in the game */
 
@@ -81,17 +70,28 @@ function displayQuestion() {
     //document.body.appendChild(qDisplay);
 }
 
-
 function trueIsRight() {
-    // console.log("Well done!" + " function works");
+    console.log("Well done!" + " function works");
+
 };
 
 // trueIsWrong() {
 
 // };
 
-// When True is clicked do this (this is th event listener for true button)
-//
+/** When True is clicked do this (this is the event listener for true button) */
+pickTrue.addEventListener('click', function() {
+    // let answer = .answer; //improve this to grab answer object from displayed question
+    // if (answer === true) {
+    //     trueIsRight();
+    // // } else if (userQuestion.answer === false) {
+    // //     // a function here to show what the correct answer was
+    // } else {
+    //     alert('please choose true or false');
+    //     console.log('function running');
+    // }
+    console.log("pickTrue function works")
+})
 
 // falseIsRight() {
 
@@ -101,8 +101,10 @@ function trueIsRight() {
 
 // };
 
-// When False is clicked do this (this is the event listener for false button)
-//
+/** When False is clicked do this (this is the event listener for False button) */
+pickFalse.addEventListener('click', function() {
+    console.log("pickFalse function works")
+})
 
 
 // When user answer is confirmed as right (bool true) run this to track right answers out of total questions
