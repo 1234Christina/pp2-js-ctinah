@@ -72,7 +72,7 @@ function trueIsRight() {
 
 /** Event listener for true button */
 pickTrue.addEventListener('click', function() {
-    // let answer = answer; //improve this to grab answer object from displayed question
+    // let answer = document.getRootNode; //improve this to grab answer object from displayed question
     
     // if (answer === true) {
     //     trueIsRight();
@@ -82,7 +82,7 @@ pickTrue.addEventListener('click', function() {
     //     alert('please choose true or false');
     //     console.log('function running');
     // }
-    // console.log("pickTrue function works")
+    console.log("pickTrue function works")
 })
 
 // falseIsRight() {
