@@ -4,6 +4,12 @@
 body {
     padding: 2% 2%;
     background-color: #ffa530;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+main {
+    /* flex: 1 0 auto; As seen in Love Running walkthrough project */
 }
 
 /* header {
@@ -56,7 +62,7 @@ p {
     color: black;
     background-color: transparent;
 }
-/* 
-footer {
+
+/* footer {
     position: absolute;
 } */

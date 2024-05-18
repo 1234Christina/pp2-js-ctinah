@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="the loud house, trivia, quiz game, children's quiz, kid's quiz, lincoln loud, the loud family">
+    <meta name="keywords"
+        content="the loud house, trivia, quiz game, children's quiz, kid's quiz, lincoln loud, the loud family">
     <link href="assets/css/style.css" rel="stylesheet">
     <title>Loud House Quiz</title>
 </head>
+
 <body>
     <!-- Header area to contain game logo and game title -->
     <header>
@@ -15,31 +18,33 @@
             <h1>True or False?<br>The Loud House Edition!</h1>
         </span>
     </header>
-    
-    <!-- <div id="testDiv" onmouseover="working()">
+    <main>
+
+        <!-- <div id="testDiv" onmouseover="working()">
         <p>Play Game</p>
     </div> -->
 
-    <!-- Div to contain the main game space, this will hold the question and corresponding image,
+        <!-- Div to contain the main game space, this will hold the question and corresponding image,
          as well as the True and False buttons for the user -->
-    <div id="gameSpace">
-        <span>
-            <h2>True or False?</h2>
-            <p id="currentQuestion"></p>
-        </span>
-        <br>
+        <div id="gameSpace">
+            <span>
+                <h2>True or False?</h2>
+                <p id="currentQuestion"></p>
+            </span>
+            <br>
 
-        <!--Image will go here-->
-        <!-- <img src="" alt=""> -->
+            <!--Image will go here-->
+            <!-- <img src="" alt=""> -->
 
-        <button id="true">True <i class="fa-solid fa-check" title="true"></i> </button>
-        <button id="false">False <i class="fa-solid fa-xmark" title="false"></i> </button>
+            <button id="true">True <i class="fa-solid fa-check" title="true"></i> </button>
+            <button id="false">False <i class="fa-solid fa-xmark" title="false"></i> </button>
+            <br>
+            <p id="answerDisplay"></p>
+        </div>
         <br>
-        <p id="answerDisplay"></p>
-    </div>
-    <br>
-    <button id="goToNextQuestion">next question <i class="fa-solid fa-arrow-right" title="next"></i> </button>
-    <div></div>
+        <button id="goToNextQuestion">next question <i class="fa-solid fa-arrow-right" title="next"></i> </button>
+        <div></div>
+    </main>
     <footer>
         <!-- A link in the footer to take user to more information about The Loud House -->
         <p>Want to know more about <em>The Loud House</em>?
@@ -51,4 +56,5 @@
     <script src="https://kit.fontawesome.com/2ea2f5e8ab.js" crossorigin="anonymous"></script>
     <noscript>This game requires Javascript to run!</noscript>
 </body>
+
 </html>
