@@ -68,7 +68,7 @@ const questionBank = [
     {
         'question': 'Lucy and Luna are twin sisters?',
         'answer': false,
-        'correctAnswer': 'Luna is olderthan Lucy!'
+        'correctAnswer': 'Luna is older than Lucy!'
     }
 
 
@@ -99,12 +99,12 @@ function trueIsRight() {
     // console.log("Well done!" + " function works");
     let answerDisplay = document.getElementById('answerDisplay');
     answerDisplay.innerHTML = "Well Done! You answered correctly!";
-    // console.log(answerDisplay);
+    // console.log(answerDisplay.textContent);
 };
 
 function trueIsWrong() {
     let answerDisplay = document.getElementById('answerDisplay');
-    answerDisplay.innerHTML = "The correct answer is" + answer.correctAnswer;
+    answerDisplay.innerHTML = `The correct answer is ${answer.correctAnswer}`; //Display correct answer
     //alert("it works");
 };
 
@@ -113,38 +113,44 @@ pickTrue.addEventListener('click', function() {
     let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
     
     if (answer === true) {
+        // a function here to tell the user they got the answer right
         trueIsRight();
     } else if (answer === false) {
         // a function here to show what the correct answer was
         trueIsWrong();
-    } else {
-        alert('please choose true or false');
-        console.log('function running');
     }
-    console.log("pickTrue function works")
+    console.log("pickTrue function works");
 })
 
-// falseIsRight() {
+function falseIsRight() {
+    console.log("false is right");
+};
 
-// };
-
-// falseIsWrong() {
-
-// };
+function falseIsWrong() {
+    console.log("false is wrong");
+};
 
 /** Event listener for False button) */
 pickFalse.addEventListener('click', function() {
-    console.log("pickFalse function works")
+    let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
+    
+    if (answer === true) {
+        
+        falseIsWrong();
+    } else if (answer === false) {
+        
+        falseIsRight();
+    }
+    console.log("pickFalse function works");
 })
-
-
-// When user answer is confirmed as right (bool true) run this to track right answers out of total questions
-// addRightAnswers() {
-
-// };
 
 // When question has been answered move to this function
 // nextQuestionBtn() {
+
+// };
+
+// When user answer is confirmed as right (bool true) run this to track right answers out of total questions
+// addRightAnswers() {
 
 // };
 
