@@ -65,15 +65,9 @@ const questionBank = [
     // Add as many as possible
 ]
 
-// A constant variable for each button
-const nextQuestionButton = document.getElementById('goToNextQuestion');
+// A constant variable for True and False buttons
 const pickTrue = document.getElementById('true');
 const pickFalse = document.getElementById('false');
-
- /** When next question button is clicked, run the function to display a new question */
- nextQuestionButton.addEventListener('click', function() {
-    displayQuestion();
-})
 
 /** Gets a random question from the question bank */
 function nextQuestion() {
@@ -131,7 +125,7 @@ function falseIsRight() {
     console.log("false is right");
 };
 
-function falseIsWrong() {
+function falseIsWrong(answer) {
     let answerDisplay = document.getElementById('answerDisplay');
     answerDisplay.innerHTML = `This is ${answer}!`;
     console.log("false is wrong");
@@ -139,11 +133,13 @@ function falseIsWrong() {
 
 /** Event listener for False button) */
 pickFalse.addEventListener('click', function() {
-    let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
+    let question = displayQuestion();
+    let answer = question.answer; //improve this to grab answer object from displayed question
+    console.log(answer);
     
     if (answer === true) {
         // a function here to tell the user that False is wrong
-        falseIsWrong();
+        falseIsWrong(answer);
     } else if (answer === false) {
         // a function here to tell the user they picked the right answer
         falseIsRight();
@@ -152,9 +148,11 @@ pickFalse.addEventListener('click', function() {
 })
 
 // When question has been answered move to this function
-// nextQuestionBtn() {
-
-// };
+/** When next question button is clicked, run the function to display a new question */
+const nextQuestionButton = document.getElementById('goToNextQuestion');
+nextQuestionButton.addEventListener('click', function() {
+    displayQuestion();
+});
 
 // When user answer is confirmed as right (bool true) run this to track right answers out of total questions
 // addRightAnswers() {
