@@ -41,7 +41,34 @@ const questionBank = [
     },
     {
         'question': 'Mr Grouse is the Loud family\'s next door neighbour?',
-        'answer': true,
+        'answer': true
+    },
+    {
+        'question': 'Lisa Loud enjoys beauty pageants?',
+        'answer': false,
+        'correctAnswer': 'Lisa enjoys science!'
+    },
+    {
+        'question': 'Lynn Loud is the sporty one?',
+        'answer': true
+    },
+    {
+        'question': 'Luanne Loud is the musical one?',
+        'answer': false,
+        'correctAnswer': 'Luanne is the comedian!'
+    },
+    {
+        'question': 'Lincoln\'s youngest sister is called Lily?',
+        'answer': true
+    },
+    {
+        'question': 'Lana has a pet frog named Hops?',
+        'answer': true
+    },
+    {
+        'question': 'Lucy and Luna are twin sisters?',
+        'answer': false,
+        'correctAnswer': 'Luna is olderthan Lucy!'
     }
 
 
