@@ -102,22 +102,25 @@ function trueIsRight() {
     // console.log(answerDisplay.textContent);
 };
 
-function trueIsWrong() {
+function trueIsWrong(correctAnswer) {
     let answerDisplay = document.getElementById('answerDisplay');
-    answerDisplay.innerHTML = `The correct answer is ${answer.correctAnswer}`; //Display correct answer
+    answerDisplay.innerHTML = `The correct answer is ${correctAnswer}`; //Display correct answer
     //alert("it works");
 };
 
 /** Event listener for true button */
 pickTrue.addEventListener('click', function() {
-    let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
+    let question = displayQuestion();
+    let answer = question.answer; //improve this to grab answer object from displayed question
+    let correctAnswer = question.correctAnswer;
+    console.log(answer)
     
     if (answer === true) {
         // a function here to tell the user they got the answer right
         trueIsRight();
     } else if (answer === false) {
         // a function here to show what the correct answer was
-        trueIsWrong();
+        trueIsWrong(correctAnswer);
     }
     console.log("pickTrue function works");
 })
