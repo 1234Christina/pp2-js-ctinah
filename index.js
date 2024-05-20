@@ -31,12 +31,19 @@ const questionBank = [
     },
     {
         'question': 'Lincoln and Clyde are twin brothers?',
-        'answer': false //best friends
+        'answer': false,
+        'correctAnswer': 'Linclon and Clyde are best friends!'
     },
     {
         'question': 'Lucy Loud is the eldest sister?',
-        'answer': false //Lori is eldest sister
+        'answer': false,
+        'correctAnswer': 'Lori Loud is the eldest sister!'
+    },
+    {
+        'question': 'Mr Grouse is the Loud family\'s next door neighbour?',
+        'answer': true,
     }
+
 
     // Add as many as possible
 ]
@@ -46,6 +53,7 @@ function nextQuestion() {
     // uses math random to generate any question from question bank
     let randomIndex = Math.floor(Math.random() * questionBank.length);
     let question = questionBank[randomIndex];
+    // clear the answer display paragraph?
     return question;
 }
 
@@ -57,6 +65,7 @@ function displayQuestion() {
     let qDisplay = document.getElementById('currentQuestion');
     //console.log('QUESTION: ', qDisplay)
     qDisplay.innerHTML = userQuestion.question;
+    return userQuestion;
 }
 
 function trueIsRight() {
@@ -66,22 +75,25 @@ function trueIsRight() {
     // console.log(answerDisplay);
 };
 
-// trueIsWrong() {
-
-// };
+function trueIsWrong() {
+    let answerDisplay = document.getElementById('answerDisplay');
+    answerDisplay.innerHTML = "The correct answer is" + answer.correctAnswer;
+    //alert("it works");
+};
 
 /** Event listener for true button */
 pickTrue.addEventListener('click', function() {
-    // let answer = document.getRootNode; //improve this to grab answer object from displayed question
+    let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
     
-    // if (answer === true) {
-    //     trueIsRight();
-    // } else if (userQuestion.answer === false) {
-    //     // a function here to show what the correct answer was
-    // } else {
-    //     alert('please choose true or false');
-    //     console.log('function running');
-    // }
+    if (answer === true) {
+        trueIsRight();
+    } else if (answer === false) {
+        // a function here to show what the correct answer was
+        trueIsWrong();
+    } else {
+        alert('please choose true or false');
+        console.log('function running');
+    }
     console.log("pickTrue function works")
 })
 
