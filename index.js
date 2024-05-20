@@ -5,16 +5,6 @@ document.addEventListener('DOMContentLoaded', function() {
     displayQuestion();
 });
 
-// A constant variable for each button
-const nextQuestionButton = document.getElementById('goToNextQuestion');
-const pickTrue = document.getElementById('true');
-const pickFalse = document.getElementById('false');
-
- /** When next question button is clicked, run the function to display a new question */
- nextQuestionButton.addEventListener('click', function() {
-    displayQuestion();
-})
-
 /** A question bank to store all the possible questions in the game */
 const questionBank = [
     {
@@ -75,6 +65,16 @@ const questionBank = [
     // Add as many as possible
 ]
 
+// A constant variable for each button
+const nextQuestionButton = document.getElementById('goToNextQuestion');
+const pickTrue = document.getElementById('true');
+const pickFalse = document.getElementById('false');
+
+ /** When next question button is clicked, run the function to display a new question */
+ nextQuestionButton.addEventListener('click', function() {
+    displayQuestion();
+})
+
 /** Gets a random question from the question bank */
 function nextQuestion() {
     // uses math random to generate any question from question bank
@@ -126,10 +126,14 @@ pickTrue.addEventListener('click', function() {
 })
 
 function falseIsRight() {
+    let answerDisplay = document.getElementById('answerDisplay');
+    answerDisplay.innerHTML = "Well Done! You answered correctly!";
     console.log("false is right");
 };
 
 function falseIsWrong() {
+    let answerDisplay = document.getElementById('answerDisplay');
+    answerDisplay.innerHTML = `This is ${answer}!`;
     console.log("false is wrong");
 };
 
@@ -138,10 +142,10 @@ pickFalse.addEventListener('click', function() {
     let answer = displayQuestion().answer; //improve this to grab answer object from displayed question
     
     if (answer === true) {
-        
+        // a function here to tell the user that False is wrong
         falseIsWrong();
     } else if (answer === false) {
-        
+        // a function here to tell the user they picked the right answer
         falseIsRight();
     }
     console.log("pickFalse function works");
