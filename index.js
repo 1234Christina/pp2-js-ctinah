@@ -2,7 +2,7 @@
 
 /** Event listener to display first quiz question when page loads*/
 document.addEventListener('DOMContentLoaded', function() {
-    displayQuestion();
+    displayNextQuestion();
 });
 
 /** A question bank to store all the possible questions in the game */
@@ -79,7 +79,7 @@ function nextQuestion() {
 }
 
 /** Random question generated, Displays it to the user */
-function displayQuestion() {
+function displayNextQuestion() {
     let userQuestion = nextQuestion();
     //console.log ('QUESTION OBJECT: ', userQuestion)
     //console.log ('USER QUESTION: ', userQuestion.question)
@@ -104,7 +104,7 @@ function trueIsWrong(correctAnswer) {
 
 /** Event listener for true button */
 pickTrue.addEventListener('click', function() {
-    let question = displayQuestion();
+    let question = displayNextQuestion();
     let answer = question.answer; //improve this to grab answer object from displayed question
     let correctAnswer = question.correctAnswer;
     console.log(answer)
@@ -133,7 +133,7 @@ function falseIsWrong(answer) {
 
 /** Event listener for False button) */
 pickFalse.addEventListener('click', function() {
-    let question = displayQuestion();
+    let question = displayNextQuestion();
     let answer = question.answer; //improve this to grab answer object from displayed question
     console.log(answer);
     
@@ -151,7 +151,7 @@ pickFalse.addEventListener('click', function() {
 /** When next question button is clicked, run the function to display a new question */
 const nextQuestionButton = document.getElementById('goToNextQuestion');
 nextQuestionButton.addEventListener('click', function() {
-    displayQuestion();
+    displayNextQuestion();
 });
 
 // When user answer is confirmed as right (bool true) run this to track right answers out of total questions
