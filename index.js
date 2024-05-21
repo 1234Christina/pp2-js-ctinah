@@ -69,6 +69,9 @@ const questionBank = [
 const pickTrue = document.getElementById('true');
 const pickFalse = document.getElementById('false');
 
+// A variable for the answer display paragraph
+let answerDisplay = document.getElementById('answerDisplay');
+
 /** Gets a random question from the question bank */
 function nextQuestion() {
     // uses math random to generate any question from question bank
@@ -90,6 +93,34 @@ function displayNextQuestion() {
     qDisplay.setAttribute('data-answer', 'false');
     return userQuestion;
 }
+
+/** Event Listeners for True and False buttons */
+pickTrue.addEventListener('click', function() {
+    checkAnswer('true')
+})
+pickFalse.addEventListener('click', function() {
+    checkAnswer('false')
+})
+
+/** A function to check the users choice against the correct answer */
+function checkAnswer(userAnswer) {
+    let qDisplay = document.getElementById('currentQuestion');
+    let correctAnswer = qDisplay.getAttribute('data-answer');
+    let message;
+    if (correctAnswer === userAnswer) {
+        // tells user they got it correct 
+        message = "Well Done! You answered correctly!";
+    } else {
+        // tells user the correct was X
+        message = `The answer was ${correctAnswer}`;
+    }
+    // let answerDisplay = document.getElementById('answerDisplay');
+    answerDisplay.innerHTML = message;
+
+}
+
+/** Wait 1 second before displaying the next question */
+setTimeout(displayNextQuestion(), 1000);
 
 // function trueIsRight() {
 //     // console.log("Well done!" + " function works");
@@ -149,27 +180,6 @@ function displayNextQuestion() {
 //     console.log("pickFalse function works");
 // })
 
-pickTrue.addEventListener('click', function() {
-    checkAnswer('true')
-})
-pickFalse.addEventListener('click', function() {
-    checkAnswer('false')
-})
-
-function checkAnswer(userAnswer) {
-    let qDisplay = document.getElementById('currentQuestion');
-    let correctAnswer = qDisplay.getAttribute('data-answer');
-    let message;
-    if (correctAnswer === userAnswer) {
-        // tells user they got it correct
-        message = "Well Done! You answered correctly!";
-    } else {
-        message = `The answer was ${correctAnswer}`;
-    }
-    let answerDisplay = document.getElementById('answerDisplay');
-    answerDisplay.innerHTML = message;
-
-}
 
 // When question has been answered move to this function
 /** When next question button is clicked, run the function to display a new question */
