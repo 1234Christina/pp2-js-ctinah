@@ -5,27 +5,50 @@ The deployed site can be seen here (link)
 
 screenshot from amiresponsive to show what the final output looks like on different screen sizes
 
+You can display an image by adding ! and wrapping the alt text in [ ]. Alt text is a short text equivalent of the information in the image. Then, wrap the link for the image in parentheses ().
+
+![Screenshot from amiresponsive.](/assets/images/amiresponsive.png)
+
+
 ## Features
 screenshots of all the main features on the page
 
 ### Logo
-Immediately lets the user know what the quiz is about
+Immediately lets the user know what the quiz is about.
+
+![Screenshot of Loud House Logo](/assets/images/loudhouselogo.png)
+
 ### Heading containing True or False?
 Gives user further information on what type of quiz it is.
-### The question display
+
+![Screenshot of Heading](/assets/images/logo-and-header.png)
+
+### The question display and True and False buttons
 A question is immediately visible on the page enabling the user to get started right away!
-### True and False buttons
-let the user quickly and easily begin answering questions
+
+True and False buttons let the user quickly and easily begin answering questions.
+
+![Screenshot of question and True or False buttons](/assets/images/question-and-choice-buttons.png)
+
 ### Skip question button
 Allow the user to skip to the next question
+
+![Screenshot of skip question button](/assets/images/skip-question.png)
+
 ### An answer section 
-to tell the user if they answered right or wrong and provide the right answer if they got it wrong
+To tell the user if they answered right or wrong and provide the right answer if they got it wrong
+
+![Screenshot of answer section](/assets/images/answer-display.png)
+
 ### A footer 
-where the user can click a link to go to the Loud House wiki page and learn more!
+Where the user can click a link to go to the Loud House wiki page and learn more!
+
+![Screenshot of link in footer](/assets/images/link-more-info.png)
 
 # Future Features
-A corresponding image with every question.
-An option to allow the user to pick how many questions they want to answer eg 10, 20 or more
+I would like to add a corresponding image with every question such as an image of each character.
+
+I would add an option to allow the user to pick how many questions they want to answer eg 10, 20 or more.
 
 # Testing
 I tested the quiz in different browsers (add screenshots)
