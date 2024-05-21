@@ -72,7 +72,8 @@ Bug fix: my initial functions weren't displaying my questions as text in a html 
 Bug fix: I mistakenly tried to put a function inside the DOM content loaded event listener which needed to be defined outside the listener.
 
 ## Validator testing 
-w3c jigsaw jshint 
+The project passed validation on w3c, jigsaw, and jshint. 
+
 ## Lighthouse
 
 The project performs well on Lighthouse testing.

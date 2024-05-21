@@ -8,14 +8,6 @@ body {
     font-family: Nunito, Verdana, Geneva, Tahoma, sans-serif;
 }
 
-/* main {
-    flex: 1 0 auto; As seen in Love Running walkthrough project 
-} */ 
-
-/* header {
-    width: fit-content;
-} */
-
 /*Styling for span within header*/
 header > span {
     display: block;
@@ -62,10 +54,6 @@ p {
     color: black;
     background-color: transparent;
 }
-
-/* footer {
-    position: absolute;
-} */
 
 /* MEDIA QUERIES TO GO HERE */
 @media screen and (min-width: 320px) {
