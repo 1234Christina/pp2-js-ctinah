@@ -1,7 +1,9 @@
 # The Loud House Quiz
 My project is a True or False Quiz on The Loud House which is an animated cartoon TV series for kids. It allows a user to answer trivia questions based on the characters and their lives and relationships. The quiz can be enjoyed by children and adults alike, as can the tv series!
 
-The deployed site can be seen here (link)
+#### The deployed site can be seen [here](https://1234christina.github.io/pp2-js-ctinah/)
+
+![The Loud House Quiz](/assets/images/quiz-image.png)
 
 screenshot from amiresponsive to show what the final output looks like on different screen sizes
 
@@ -11,7 +13,7 @@ You can display an image by adding ! and wrapping the alt text in [ ]. Alt text 
 
 
 ## Features
-screenshots of all the main features on the page
+An overview of all the main features on the page.
 
 ### Logo
 Immediately lets the user know what the quiz is about.
@@ -54,7 +56,11 @@ I would add an option to allow the user to pick how many questions they want to 
 I tested the quiz in different browsers (add screenshots)
 
 I tested responsivity throughout development in Chrome Dev Tools
+
 I tested all functions throughout development in the console
+
+![Screenshot of Debugging](/assets/images/debugging.png)
+
 
 User testing - family and friends tested my quiz to ensure it was easy to use
 I ensured to try diferent user actions to ensure no errors were caused by the code
@@ -62,17 +68,23 @@ I ensured to try diferent user actions to ensure no errors were caused by the co
 ## Bugs
 ### Solved bugs: 
 Bug fix: my initial functions weren't displaying my questions as text in a html element, and drilling down into the object to get the text of the question solved the bug. I also needed to remove a line of code which was appending the question to the end of the document.
+
 Bug fix: I mistakenly tried to put a function inside the DOM content loaded event listener which needed to be defined outside the listener.
 
 ## Validator testing 
 w3c jigsaw jshint 
 ## Lighthouse
 
+The project performs well on Lighthouse testing.
+![Screenshot of Lighthouse testing](/assets/images/lighthouse.png)
+
 # Deployment 
 The site was deployed to Github Pages.
 ### The steps to deploy are as follows:
 In the GitHub repo navigate to the settings tab.
+
 From the source section drop-down menu, select the master branch.
+
 Then the page provides the link to the completed website.
 
 # Credits
@@ -85,6 +97,9 @@ The Loud House Logo was cut from a larger image found via google search
 
 # UX/UI considerations
 I searched google for fonts appropriate to and popular with kids. and I also looked for comic-book style/cartoon style fonts.
+
 I searched font awesome icons to make the buttons more intuitive and interesting to children using the app and I added in titles for accessibility. 
 
 I included wireframes of the design I had in mind.
+
+![Screenshot of wireframe](/assets/images/wireframeLoudHouseGame.png)
